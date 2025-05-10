@@ -548,11 +548,11 @@ const DueDiligenceList = () => {
                       <div className="overflow-x-auto">
                         <table className="min-w-full divide-y divide-gray-200 text-sm">
                           <thead className="bg-gray-50">
-                            <tr>
-                              <th className="px-4 py-2 text-left">Factor</th>
-                              <th className="px-4 py-2 text-left">Nivel de Riesgo</th>
-                              <th className="px-4 py-2 text-left">Justificación</th>
-                            </tr>
+                            <tr key={index}>
+  <td className="px-4 py-2">{item.factor || 'No especificado'}</td>
+  <td className="px-4 py-2">{item.nivel || 'No disponible'}</td>
+  <td className="px-4 py-2">{item.justificacion || 'Sin justificación'}</td>
+</tr>
                           </thead>
                           <tbody className="bg-white divide-y divide-gray-200">
                             {viewingReport.reportData.evaluacionRiesgo?.map((item, index) => (
